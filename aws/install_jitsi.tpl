@@ -27,7 +27,7 @@ sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/j
 apt update
 echo -e "DefaultLimitNOFILE=65000\nDefaultLimitNPROC=65000\nDefaultTasksMax=65000" >> /etc/systemd/system.conf
 systemctl daemon-reload
-# Configure Jits install
+# Configure Jits install 123
 debconf-set-selections <<< $(echo 'jitsi-videobridge jitsi-videobridge/jvb-hostname string '$HOSTNAME)
 debconf-set-selections <<< 'jitsi-meet-web-config   jitsi-meet/cert-choice  select  "Generate a new self-signed certificate"';
 
